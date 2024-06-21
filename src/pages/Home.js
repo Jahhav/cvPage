@@ -1,4 +1,6 @@
 import "./Home.css";
+import Kurz from "../components/Kurz";
+import Zkusenost from "../components/Zkusenost";
 
 const Home = () => {
   return (
@@ -7,26 +9,43 @@ const Home = () => {
         <div className="picture-cvontainer"></div>
         <div className="heading-container">
           <h1>Jan Havlát</h1>
-          <h3>Vývojář Javascriptu - junior</h3>
+          <h3 className="hedings-margins">Vývojář Javascriptu - junior</h3>
         </div>
         <div className="content-container">
           <div className="left-side">
             <div className="osobni-ifno">
               <h2>Osobní informace</h2>
               <ul>
-                <li>jan.havlath@gmail.com</li>
-                <li>730 652 581</li>
-                <li>Brno, Česko</li>
-                <li>B, A2</li>
+                <li>
+                  <span>Email</span>: jan.havlath@gmail.com
+                </li>
+                <li>
+                  <span>Tel</span>: 730 652 581
+                </li>
+                <li>
+                  <span>Bydliště</span>: Brno, Česko
+                </li>
+                <li>
+                  <span>Řidičské oprávnění</span>: B, A2
+                </li>
+                <li>
+                  <a href="https://jahhav.github.io/">Prtfolio</a>
+                </li>
+                <li>
+                  <a href="https://github.com/Jahhav">GitHub</a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/jan-havlat">LinkedIN</a>
+                </li>
               </ul>
             </div>
             <div className="vzdelani">
               <h2>Vzdělání</h2>
-              <h4>
+              <h4 className="hedings-margins">
                 Středoškolské s maturitou (Logistika - ukončená maturitní
                 zkouškou)
               </h4>
-              <p>
+              <p className="paragraps-uls-margins">
                 Střední škola informatiky, poštovnictví a finančnictví Brno,
                 příspěvková organizace zář 2015 - čvn 2019
               </p>
@@ -66,49 +85,69 @@ const Home = () => {
             <div className="prac-zkus">
               <h2>Pracovní zkušenosti</h2>
 
-              <h3>Associate Systems Management - Science Logic</h3>
-              <h4>Kyndryl Client Center</h4>
-              <p>květen 2022 - Současnost</p>
-              <ul>
-                <li>Monitorování serverů pomocí technologie Science Logic</li>
-                <li>Práce s Linux terminálem</li>
-                <li>Práce s nástrojem pro správu tiketů ServiceNow</li>
-                <li>Monitorování pomocí Netcool</li>
-                <li>Ad-hoc řešení problémů</li>
-                <li>Odstraňování problémů</li>
-                <li>Údržba kolektorů a serverů</li>
-                <li>Denní komunikace se zákazníky</li>
-              </ul>
+              <Zkusenost
+                nameOfPosition="Associate Systems Management - Science Logic"
+                company="Kyndryl Client Center"
+                dateFromTo="květen 2022 - Současnost"
+                tasks={[
+                  "Monitorování serverů pomocí technologie Science Logic",
+                  "Práce s Linux terminálem",
+                  "Práce s nástrojem pro správu tiketů ServiceNow",
+                  "Monitorování pomocí Netcool",
+                  "Ad-hoc řešení problémů",
+                  "Odstraňování problémů",
+                  "Údržba kolektorů a serverů",
+                  "Denní komunikace se zákazníky",
+                ]}
+              />
 
-              <h3>Supply chain associate</h3>
-              <h4>Currys CoE s.r.o., Brno</h4>
-              <p>září 2019 - březen 2022</p>
-              <ul>
-                <li>Prošetřování odchylek v dodávkách</li>
-                <li>Kontrola systému SAP ERP a zjišťování stavu objednávek</li>
-                <li>
-                  Podpora dopravců (identifikace neznámých produktů na
-                  pobočkách)
-                </li>
-                <li>
-                  Denní komunikace se sklady, obchody a zákaznickými centry
-                  prostřednictvím e-mailu
-                </li>
-                <li>Synchronizace dat</li>
-                <li>Meetingy s obchodními partnery</li>
-                <li>Hledání zlepšení a úspor nákladů</li>
-              </ul>
+              <Zkusenost
+                nameOfPosition="Supply chain associate"
+                company="Currys CoE s.r.o., Brno"
+                dateFromTo="září 2019 - březen 2022"
+                tasks={[
+                  "Prošetřování odchylek v dodávkách",
+                  "Kontrola systému SAP ERP a zjišťování stavu objednávek",
+                  "Podpora dopravců (identifikace neznámých produktů na pobočkách)",
+                  "Denní komunikace se sklady, obchody a zákaznickými centry prostřednictvím e-mailu",
+                  "Synchronizace dat",
+                  "Meetingy s obchodními partnery",
+                  "Hledání zlepšení a úspor nákladů",
+                ]}
+              />
             </div>
             <div className="kurzy">
               <h2>Kurzy</h2>
 
-              <h3>The Complete Web Development Bootcamp</h3>
-              <h4>Udemy</h4>
-              <p>leden 2023</p>
-
-              <h3>Complete React Developer (w/ Redux, Hooks, GraphQL)</h3>
-              <h4>Udemy</h4>
-              <p>prosinec 2023</p>
+              <Kurz
+                nameOfKurz={"ENGETO CERTIFIED REACT GRADUATE"}
+                company={"Engeto"}
+                date={"Červen 2024"}
+                id={"ID pověření 2024-R-012"}
+                description={
+                  "React.JS, components, UseEffekt, npm, API, TypeScript, Reagující web design, states"
+                }
+              />
+              <Kurz
+                nameOfKurz={"The Complete Web Development Bootcamp"}
+                company={"Udemy"}
+                date={"leden 2023"}
+                // id={"ID pověření 2024-R-012"}
+                description={
+                  "Bootstrap 5, Javascript ES6, DOM Manipulation, Git, GitHub Version Control"
+                }
+              />
+              <Kurz
+                nameOfKurz={
+                  "Complete React Developer (w/ Redux, Hooks, GraphQL)"
+                }
+                company={"Udemy"}
+                date={"prosinec 2023"}
+                // id={"ID pověření 2024-R-012"}
+                description={
+                  "React Basics, React Router, Authentication, Firebase, Netlify"
+                }
+              />
             </div>
             <div className="konicky">
               <h2>Koníčky</h2>

@@ -36,7 +36,10 @@ body {
   margin-bottom: 10px;
 }
 .heading-container h3 {
-  font-weight: normal;
+  font-weight: bold;
+  color: #f0e68c;
+  font-size: 1.5em;
+  margin-top: 10px 0 0 0;
 }
 .content-container {
   display: flex;
@@ -52,19 +55,22 @@ body {
   flex: 2;
   padding: 20px;
 }
+
+.osobni-ifno span {
+  text-decoration: underline;
+}
 h2 {
   border-bottom: 2px solid #4a90e2;
   margin-bottom: 10px;
   padding-bottom: 5px;
   color: #4a90e2;
 }
-h3,
-h4 {
+.hedings-margins {
   color: #333;
   margin-bottom: 5px;
 }
-p,
-ul {
+
+.paragraps-uls-margins {
   margin-bottom: 15px;
 }
 ul {
@@ -87,6 +93,22 @@ ul li {
 .osobni-ifno li {
   margin-bottom: 5px;
 }
+.osobni-ifno a {
+  display: inline-block; /* Přidání zobrazení blokového prvku pro hezčí tlačítko */
+  color: #fff; /* Barva textu */
+  background-color: #4a90e2; /* Pozadí tlačítka */
+  padding: 0px 15px; /* Odsazení vnitřku tlačítka */
+  text-align: center; /* Zarovnání textu do středu */
+  text-decoration: none; /* Odstranění podtržení */
+  border-radius: 5px; /* Zaoblené rohy */
+  transition: background-color 0.3s ease; /* Přidání přechodu pro změnu barvy */
+  font-size: 16px;
+}
+
+.osobni-ifno a:hover {
+  background-color: #357ab8; /* Změna barvy při najetí myší */
+}
+
 @media (max-width: 1024px) {
   .body-container {
     padding: 10px;
@@ -186,6 +208,10 @@ ul li {
   .heading-container h3 {
     font-size: 1.3em;
   }
+  .osobni-ifno a {
+    font-size: 14px;
+    padding: 0px 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -229,5 +255,9 @@ ul li {
 
   .heading-container h3 {
     font-size: 1.2em;
+  }
+  .osobni-ifno a {
+    font-size: 12px;
+    padding: 0px 10px;
   }
 }
